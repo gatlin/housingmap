@@ -3,8 +3,6 @@ import { Map, TileLayer, Marker, Popup, Polygon } from 'react-leaflet';
 import './HousingMap.css';
 import coords from './coords';
 
-
-//    [30.252878, -97.767825],
 class HousingMap extends React.Component {
     state = {
         lat:  30.2711286,
