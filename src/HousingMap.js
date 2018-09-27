@@ -58,17 +58,20 @@ class HousingMap extends React.Component {
 
     districtStyle = feature => {
         const colors = [
-            '#2D635E',
-            //            '#A7CEC9',
-            '#E67A2E',
-            '#FF00FF',
-            '#E3E29E',
-
-            '#3B371A'
+            '#8b9ab7',
+            '#c88799',
+            '#3aced2',
+            '#848047',
+            '#0a7b3c',
+            '#aa523d',
+            '#287cd7',
+            '#31474e',
+            '#9ec18f',
+            '#7d13bf'
         ];
         console.log('[style]', feature.properties.council_district);
         return {
-            color: colors[(feature.properties.council_district-1) % 5]
+            color: colors[(feature.properties.council_district-1)]
         };
     };
 
@@ -87,7 +90,7 @@ class HousingMap extends React.Component {
                     />
                   { this.renderDots(coords) }
                   <GeoJSON
-                    opacity={0.3}
+                    opacity={0.35}
                     data={data} color='purple'
                     style={this.districtStyle}
                     onEachFeature={this.onEachDistrict}
