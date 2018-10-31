@@ -13,6 +13,7 @@ import './HousingMap.css';
 import coords from './coords';
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import * as data from './austindistricts.json';
+import * as alcohol from './no_public_consumption.json';
 
 class HousingMap extends React.Component {
 
@@ -94,6 +95,10 @@ class HousingMap extends React.Component {
                     data={data} color='purple'
                     style={this.districtStyle}
                     onEachFeature={this.onEachDistrict}
+                    />
+                  <GeoJSON
+                    opacity={0.7}
+                    data={alcohol} color='red'
                     />
                 </LayersControl>
               </Map>
